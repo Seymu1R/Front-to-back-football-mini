@@ -1,4 +1,6 @@
 ﻿@{ViewData["Title"]="FOOTBAL-HOME";}
+@model ModelsClases ;
+
 <!--Start Slider-->
 <div id="rev-slider" class="rev-slider">
     <!-- START REVOLUTION SLIDER -->
@@ -6,9 +8,11 @@
         <div id="rev_slider_1_5" class="rev_slider fullscreenbanner" style="display:none;" data-version="5.4.8.1">
             <ul>
                 <!-- SLIDE  1-->
-                <li data-index="rs-2" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="300"  data-thumb="assets/100x50_129c3-slider-bg-2.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Slide 1" data-param1="01" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+                @foreach (var item in Model.Slider)
+               {
+                   <li data-index="rs-2" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="300"  data-thumb="assets/100x50_129c3-slider-bg-2.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Slide 1" data-param1="01" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
                     <!-- MAIN IMAGE -->
-                    <img src="football/img/slider2.jpg"  data-kenburns="on" data-duration="20000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="120" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0" data-bgparallax="10" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+                    <img src="@item.ImgUrl"  data-kenburns="on" data-duration="20000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="120" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0" data-bgparallax="10" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
                     <div class="slider-overlay"></div>
                     <!-- LAYERS -->
 
@@ -51,7 +55,7 @@
                          data-paddingright="[0,0,0,0]"
                          data-paddingbottom="[0,0,0,0]"
                          data-paddingleft="[0,0,0,0]"
-                         style="z-index: 6; white-space: nowrap; font-size: 50px; line-height: 16px; font-weight: 600; color: #FFFFFF; letter-spacing: 0px;font-family: 'Oswald', sans-serif; text-transform: uppercase">RISE AS ONE</div>
+                         style="z-index: 6; white-space: nowrap; font-size: 50px; line-height: 16px; font-weight: 600; color: #FFFFFF; letter-spacing: 0px;font-family: 'Oswald', sans-serif; text-transform: uppercase">@item.Title</div>
 
                     <!-- LAYER NR. 8 -->
                     <div class="tp-caption   tp-resizeme"
@@ -71,7 +75,7 @@
                          data-paddingbottom="[0,0,0,0]"
                          data-paddingleft="[0,0,0,0]"
 
-                         style="z-index: 7; white-space: nowrap; font-size: 18px; line-height: 22px; font-weight: 400; color: #FFFFFF; letter-spacing: 0px;font-family: 'Roboto', sans-serif;">Join Us For The Better Football</div>
+                         style="z-index: 7; white-space: nowrap; font-size: 18px; line-height: 22px; font-weight: 400; color: #FFFFFF; letter-spacing: 0px;font-family: 'Roboto', sans-serif;">@item.SubTitle</div>
 
                     <div class="tp-caption tp-resizeme"
                          id="slide-2-layer-4"
@@ -92,210 +96,10 @@
                     </div>
 
                 </li>
+                   
+               }             
 
-                <!-- SLIDE  2 -->
-                <li data-index="rs-4" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="300"  data-thumb="assets/100x50_9a2ac-slider-bg-4.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Slide 2" data-param1="02" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
-                    <!-- MAIN IMAGE -->
-                    <img src="football/img/slider3.jpg"  data-kenburns="on" data-duration="20000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="120" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0" data-bgparallax="10" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
-                    <div class="slider-overlay"></div>
-                    <!-- LAYERS -->
-
-                    <!-- LAYER NR. 15 -->
-                    <div class="tp-caption   tp-resizeme"
-                         id="slide-4-layer-1"
-                         data-x="['right','center','center','center']" data-hoffset="['5','0','0','0']"
-                         data-y="['middle','middle','middle','middle']" data-voffset="['-120','-115','-110','-114']"
-                         data-fontsize="['16','14','16','14']"
-                         data-width="none"
-                         data-height="none"
-                         data-whitespace="nowrap"
-
-                         data-type="text"
-                         data-responsive_offset="on"
-
-                         data-frames='[{"delay":10,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":280,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
-                         data-textAlign="['inherit','inherit','inherit','inherit']"
-                         data-paddingtop="[0,0,0,0]"
-                         data-paddingright="[0,0,0,0]"
-                         data-paddingbottom="[0,0,0,0]"
-                         data-paddingleft="[0,0,0,0]"
-
-                         style="z-index: 5; white-space: nowrap; font-size: 16px; line-height: 22px; font-weight: 500; color: #FFFFFF !important; letter-spacing: 0px;font-family: 'Roboto', sans-serif;">The Most latest </div>
-
-                    <!-- LAYER NR. 16 -->
-                    <div class="tp-caption   tp-resizeme"
-                         id="slide-4-layer-2"
-                         data-x="['right','center','center','center']" data-hoffset="['0','0','0','0']"
-                         data-y="['middle','middle','middle','middle']" data-voffset="['-62','65','-62','-62']"
-                         data-fontsize="['80','60','50','40']"
-                         data-lineheight="['105','80','80','51']"
-                         data-width="none"
-                         data-height="none"
-                         data-whitespace="nowrap"
-
-                         data-type="text"
-                         data-responsive_offset="on"
-
-                         data-frames='[{"delay":10,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":280,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
-                         data-textAlign="['inherit','inherit','inherit','inherit']"
-                         data-paddingtop="[0,0,0,0]"
-                         data-paddingright="[0,0,0,0]"
-                         data-paddingbottom="[0,0,0,0]"
-                         data-paddingleft="[0,0,0,0]"
-
-                         style="z-index: 6; white-space: nowrap; font-size: 80px; font-weight: 600; color: #FFFFFF; letter-spacing: 0px;font-family: 'Oswald', sans-serif;text-transform: uppercase;">Football Club</div>
-
-                    <!-- LAYER NR. 17 -->
-                    <div class="tp-caption   tp-resizeme"
-                         id="slide-4-layer-3"
-                         data-x="['right','center','center','center']" data-hoffset="['0','0','0','0']"
-                         data-y="['middle','middle','middle','middle']" data-voffset="['20','0','0','0']"
-                         data-fontsize="['18','18','17','17']"
-                         data-width="none"
-                         data-height="none"
-                         data-whitespace="nowrap"
-
-                         data-type="text"
-                         data-responsive_offset="on"
-
-                         data-frames='[{"delay":10,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":280,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
-                         data-textAlign="['inherit','inherit','inherit','inherit']"
-                         data-paddingtop="[0,0,0,0]"
-                         data-paddingright="[0,0,0,0]"
-                         data-paddingbottom="[0,0,0,0]"
-                         data-paddingleft="[0,0,0,0]"
-
-                         style="z-index: 7; white-space: nowrap; font-size: 18px; line-height: 22px; font-weight: 400; color: #FFFFFF; letter-spacing: 0px;font-family: 'Roboto', sans-serif;">Join Us For The Better Football</div>
-
-                    <div class="tp-caption   tp-resizeme"
-                         id="slide-2-layer-8"
-                         data-x="['right','center','center','center']" data-hoffset="['0','0','0','0']"
-                         data-y="['top','top','top','top']" data-voffset="['410','399','513','260']"
-                         data-width="['260','160','260','260']"
-                         data-height="none"
-                         data-whitespace="nowrap"
-                         data-type="button"
-                         data-responsive_offset="on"
-                         data-frames='[{"delay":10,"speed":2000,"frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"Power4.easeInOut"},{"delay":"wait","speed":280,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"500","ease":"Linear.ease","to":"o:1;rX:0;rY:0;rZ:0;z:0;"}]'
-                         data-textAlign="['inherit','inherit','inherit','inherit']"
-                         data-paddingtop="[0,0,0,0]"
-                         data-paddingright="[0,0,0,0]"
-                         data-paddingbottom="[0,0,0,0]"
-                         data-paddingleft="[0,0,0,0]"
-
-                         style="z-index: 11;min-width:960px; max-width:960px; white-space: nowrap; font-size: 12px; line-height: 22px; font-weight: 600; color: #FFFFFF; letter-spacing: 0px;font-family: 'Roboto', sans-serif;"><a href="#about" class="btn scroll white-tran-blue-btn  mr-3"> BOOK NOW</a> <a href="#contact" class="btn white-blue-btn scroll white-trans-btn-with-white-btn">WATCH MATCH</a>
-                    </div>
-                </li>
-
-                <!--  SLIDE 3-->
-                <li data-index="rs-1" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="300"  data-thumb="assets/100x50_44515-slider-bg-3.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Slide 3" data-param1="03" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
-                    <!-- MAIN IMAGE -->
-
-                    <img src="football/img/slider4.jpg"  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="off" class="rev-slidebg" alt="slider-image" data-no-retina>
-                    <div class="slider-overlay"></div>
-                    <!-- LAYERS -->
-                    <div class="rs-background-video-layer"
-                         data-forcerewind="on"
-                         data-volume="mute"
-                         data-videowidth="100%"
-                         data-videoheight="100vh"
-                         data-videomp4="football/video/slider-video.mp4"
-                         data-videopreload="auto"
-                         data-videoloop="loopandnoslidestop"
-                         data-forceCover="1"
-                         data-aspectratio="16:9"
-                         data-autoplay="true"
-                         data-autoplayonlyfirsttime="false"></div>
-
-                    <!-- LAYER NR. 11 -->
-                    <!-- LAYERS -->
-                    <!-- LAYER NR. 11 -->
-                    <div class="tp-caption   tp-resizeme rs-parallaxlevel-2"
-                         id="slide-1-layer-1"
-                         data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
-                         data-y="['middle','middle','middle','middle']" data-voffset="['-120','-115','-114','-114']"
-                         data-fontsize="['16','14','14','14']"
-                         data-width="none"
-                         data-height="none"
-                         data-whitespace="nowrap"
-
-                         data-type="text"
-                         data-responsive_offset="on"
-
-                         data-frames='[{"delay":10,"speed":2000,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":280,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
-                         data-textAlign="['inherit','inherit','inherit','inherit']"
-                         data-paddingtop="[0,0,0,0]"
-                         data-paddingright="[0,0,0,0]"
-                         data-paddingbottom="[0,0,0,0]"
-                         data-paddingleft="[0,0,0,0]"
-
-                         style="z-index: 5; white-space: nowrap; font-size: 16px; line-height: 22px; font-weight: 500; color: #eaeaef;font-family: 'Roboto', sans-serif;">The Most latest </div>
-
-                    <!-- LAYER NR. 12 -->
-                    <div class="tp-caption   tp-resizeme rs-parallaxlevel-3"
-                         id="slider1-layer-2"
-                         data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
-                         data-y="['middle','middle','middle','middle']" data-voffset="['-62','-62','-62','-62']"
-                         data-fontsize="['80','60','50','40']"
-                         data-width="none"
-                         data-height="none"
-                         data-whitespace="nowrap"
-
-                         data-type="text"
-                         data-responsive_offset="on"
-
-                         data-frames='[{"delay":10,"speed":2000,"frame":"0","from":"z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;","to":"o:1;","ease":"Power2.easeOut"},{"delay":"wait","speed":280,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
-                         data-textAlign="['inherit','inherit','inherit','inherit']"
-                         data-paddingtop="[0,0,0,0]"
-                         data-paddingright="[0,0,0,0]"
-                         data-paddingbottom="[0,0,0,0]"
-                         data-paddingleft="[0,0,0,0]"
-
-                         style="z-index: 6; white-space: nowrap; font-size: 80px; line-height: 16px; font-weight: 600; color: #ffffff; letter-spacing: 0px;font-family: 'Oswald', sans-serif; text-transform: uppercase">RISE AS ONE</div>
-
-                    <!-- LAYER NR. 13 -->
-                    <div class="tp-caption   tp-resizeme rs-parallaxlevel-2"
-                         id="slide-1-layer-3"
-                         data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
-                         data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']"
-                         data-fontsize="['18','18','16','16']"
-                         data-width="none"
-                         data-height="none"
-                         data-whitespace="nowrap"
-
-                         data-type="text"
-                         data-responsive_offset="on"
-
-                         data-frames='[{"delay":10,"speed":2000,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":280,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
-                         data-textAlign="['inherit','inherit','inherit','inherit']"
-                         data-paddingtop="[0,0,0,0]"
-                         data-paddingright="[0,0,0,0]"
-                         data-paddingbottom="[0,0,0,0]"
-                         data-paddingleft="[0,0,0,0]"
-
-                         style="z-index: 7; white-space: nowrap; font-size: 18px; line-height: 22px; font-weight: 400; color: #eaeaef; font-family: 'Roboto', sans-serif;">Join Us For The Better Football</div>
-
-                    <div class="tp-caption rev-btn  rs-parallaxlevel-2"
-                         id="slide-1-layer-4"
-                         data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
-                         data-y="['middle','middle','middle','middle']" data-voffset="['62','62','53','50']"
-                         data-width="none"
-                         data-height="none"
-                         data-whitespace="nowrap"
-                         data-type="text"
-                         data-responsive_offset="on"
-                         data-responsive="off"
-                         data-frames='[{"delay":10,"speed":2000,"frame":"0","from":"x:-50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":280,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
-                         data-textAlign="['inherit','inherit','inherit','inherit']"
-                         data-paddingtop="[0,0,0,0]"
-                         data-paddingright="[0,0,0,0]"
-                         data-paddingbottom="[0,0,0,0]"
-                         data-paddingleft="[0,0,0,0]"
-
-                         style="z-index: 11; max-width:960px; white-space: nowrap; font-size: 12px; line-height: 22px; font-weight: 600; color: #ffffff; letter-spacing: 0px;font-family: 'Roboto', sans-serif;"><a href="#about" class="btn scroll white-tran-blue-btn">WATCH MATCH</a>
-                    </div>
-
-                </li>
+               
             </ul>
             <div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div>
         </div>
@@ -625,157 +429,26 @@
 
         <!--Portfolio Items-->
         <div id="js-grid-mosaic-flat" class="cbp cbp-l-grid-mosaic-flat">
-            <div class="cbp-item Achievement">
-                <a href="football/img/gallary3.jpg" class="cbp-caption cbp-lightbox" data-title="Easy Note<br>by Cosmin Capitanu">
+            @foreach (var item in Model.Gallery)
+           {
+               <div class="cbp-item Achievement">
+                <a href="@item.ImgUrl" class="cbp-caption cbp-lightbox" data-title="Easy Note<br>by Cosmin Capitanu">
                     <div class="cbp-caption-defaultWrap">
-                        <img src="football/img/gallary3.jpg" alt="">
+                        <img src="@item.ImgUrl" alt="">
                     </div>
                     <div class="cbp-caption-activeWrap">
                         <div class="cbp-l-caption-alignCenter">
                             <div class="cbp-l-caption-body">
-                                <div class="cbp-l-caption-title">FIFA Champion</div>
-                                <div class="cbp-l-caption-desc">by Cosmin Capitanu</div>
+                                <div class="cbp-l-caption-title">@item.Title</div>
+                                <div class="cbp-l-caption-desc">by @item.SubTitle</div>
                             </div>
                         </div>
                     </div>
                 </a>
             </div>
-            <div class="cbp-item Training">
-                <a href="football/img/gallary4.jpg" class="cbp-caption cbp-lightbox" data-title="The Gang Blue<br>by Cosmin Capitanu">
-                    <div class="cbp-caption-defaultWrap">
-                        <img src="football/img/gallary4.jpg" alt="Practice Session">
-                    </div>
-                    <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                            <div class="cbp-l-caption-body">
-                                <div class="cbp-l-caption-title">Practice Session</div>
-                                <div class="cbp-l-caption-desc">by Cosmin Capitanu</div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="cbp-item Matches">
-                <a href="football/img/gallary5.jpg" class="cbp-caption cbp-lightbox" data-title="Tiger<br>by Cosmin Capitanu">
-                    <div class="cbp-caption-defaultWrap">
-                        <img src="football/img/gallary5.jpg" alt="Keep Winning">
-                    </div>
-                    <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                            <div class="cbp-l-caption-body">
-                                <div class="cbp-l-caption-title">Keep Winning</div>
-                                <div class="cbp-l-caption-desc">by Cosmin Capitanu</div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="cbp-item Matches Training">
-                <a href="football/img/gallary.jpg" class="cbp-caption cbp-lightbox" data-title="Flat Roman Typeface Ui<br>by Cosmin Capitanu">
-                    <div class="cbp-caption-defaultWrap">
-                        <img src="football/img/gallary.jpg" alt="Drill Shoots">
-                    </div>
-                    <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                            <div class="cbp-l-caption-body">
-                                <div class="cbp-l-caption-title">Drill Shoots</div>
-                                <div class="cbp-l-caption-desc">by Cosmin Capitanu</div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="cbp-item Training">
-                <a href="football/img/gallary6.jpg" class="cbp-caption cbp-lightbox" data-title="Remind~Me More<br>by Tiberiu Neamu">
-                    <div class="cbp-caption-defaultWrap">
-                        <img src="football/img/gallary6.jpg" alt="Workout Buddy">
-                    </div>
-                    <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                            <div class="cbp-l-caption-body">
-                                <div class="cbp-l-caption-title">Keeping Practice</div>
-                                <div class="cbp-l-caption-desc">by Tiberiu Neamu</div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="cbp-item players">
-                <a href="football/img/gallary1.jpg" class="cbp-caption cbp-lightbox" data-title="Workout Buddy<br>by Tiberiu Neamu">
-                    <div class="cbp-caption-defaultWrap">
-                        <img src="football/img/gallary1.jpg" alt="gallary 1">
-                    </div>
-                    <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                            <div class="cbp-l-caption-body">
-                                <div class="cbp-l-caption-title">Workout Buddy</div>
-                                <div class="cbp-l-caption-desc">by Tiberiu Neamu</div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="cbp-item players Training">
-                <a href="football/img/gallary2.jpg" class="cbp-caption cbp-lightbox" data-title="Ski * Buddy<br>by Tiberiu Neamu">
-                    <div class="cbp-caption-defaultWrap">
-                        <img src="football/img/gallary2.jpg" alt="Training Session">
-                    </div>
-                    <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                            <div class="cbp-l-caption-body">
-                                <div class="cbp-l-caption-title">Training Session</div>
-                                <div class="cbp-l-caption-desc">by Tiberiu Neamu</div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="cbp-item players Matches">
-                <a href="football/img/gallary8.jpg" class="cbp-caption cbp-lightbox" data-title="Virtualization Icon<br>by Paul Flavius Nechita">
-                    <div class="cbp-caption-defaultWrap">
-                        <img src="football/img/gallary8.jpg" alt="Keeping Practice">
-                    </div>
-                    <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                            <div class="cbp-l-caption-body">
-                                <div class="cbp-l-caption-title">Keeping Practice</div>
-                                <div class="cbp-l-caption-desc">by Paul Flavius Nechita</div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="cbp-item Achievement">
-                <a href="football/img/gallary7.jpg" class="cbp-caption cbp-lightbox" data-title="World Clock<br>by Paul Flavius Nechita">
-                    <div class="cbp-caption-defaultWrap">
-                        <img src="football/img/gallary7.jpg" alt=">FIFA Comes Home">
-                    </div>
-                    <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                            <div class="cbp-l-caption-body">
-                                <div class="cbp-l-caption-title">FIFA Comes Home</div>
-                                <div class="cbp-l-caption-desc">by Paul Flavius Nechita</div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="cbp-item Training Matches">
-                <a href="football/img/gallary9.jpg" class="cbp-caption cbp-lightbox" data-title="Sickpuppy<br>by Cosmin Capitanu">
-                    <div class="cbp-caption-defaultWrap">
-                        <img src="football/img/gallary9.jpg" alt="Morning Session">
-                    </div>
-                    <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                            <div class="cbp-l-caption-body">
-                                <div class="cbp-l-caption-title">Morning Session</div>
-                                <div class="cbp-l-caption-desc">by Cosmin Capitanu</div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
+               
+           }       
+            
 
 
 
@@ -799,12 +472,14 @@
         </div>
 
         <div class="team-carousel owl-carousel owl-theme mt-lg-5 pt-lg-5">
-            <div class="item">
+            @foreach (var item in Model.Player)
+            {
+                <div class="item">
                 <div class="team-item">
-                    <img src="football/img/team1.jpg" alt="team">
+                    <a href="#" ><img src="@item.ImgUrl" alt="team"></a>                    
                     <div class="team-detail">
-                        <h5 class="m-0">Alan David</h5>
-                        <p class="mb-2">Goal Keeper</p>
+                        <h5 class="m-0">@item.FullName</h5>
+                        <p class="mb-2">@item.Position</p>
                         <ul class="social-icon social-icon-clr-hvr">
                             <li><a href="javascript:void(0)"><i class="fab fa-facebook-f"></i></a></li>
                             <li><a href="javascript:void(0)"><i class="fab fa-instagram"></i></a></li>
@@ -814,51 +489,11 @@
                     </div>
                 </div>
             </div>
-            <div class="item">
-                <div class="team-item">
-                    <img src="football/img/team2.jpg" alt="team">
-                    <div class="team-detail">
-                        <h5 class="m-0">Mike Smith</h5>
-                        <p class="mb-2">Captain</p>
-                        <ul class="social-icon social-icon-clr-hvr">
-                            <li><a href="javascript:void(0)"><i class="fab fa-facebook-f"></i></a></li>
-                            <li><a href="javascript:void(0)"><i class="fab fa-instagram"></i></a></li>
-                            <li><a href="javascript:void(0)"><i class="fab fa-twitter"></i></a></li>
-                            <li><a href="javascript:void(0)"><i class="fab fa-linkedin-in"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="team-item">
-                    <img src="football/img/team3.jpg" alt="team">
-                    <div class="team-detail">
-                        <h5 class="m-0">Jone Paul</h5>
-                        <p class="mb-2">Defender</p>
-                        <ul class="social-icon social-icon-clr-hvr">
-                            <li><a href="javascript:void(0)"><i class="fab fa-facebook-f"></i></a></li>
-                            <li><a href="javascript:void(0)"><i class="fab fa-instagram"></i></a></li>
-                            <li><a href="javascript:void(0)"><i class="fab fa-twitter"></i></a></li>
-                            <li><a href="javascript:void(0)"><i class="fab fa-linkedin-in"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="team-item">
-                    <img src="football/img/team4.jpg" alt="team">
-                    <div class="team-detail">
-                        <h5 class="m-0">Smith Al</h5>
-                        <p class="mb-2">Defender</p>
-                        <ul class="social-icon social-icon-clr-hvr">
-                            <li><a href="javascript:void(0)"><i class="fab fa-facebook-f"></i></a></li>
-                            <li><a href="javascript:void(0)"><i class="fab fa-instagram"></i></a></li>
-                            <li><a href="javascript:void(0)"><i class="fab fa-twitter"></i></a></li>
-                            <li><a href="javascript:void(0)"><i class="fab fa-linkedin-in"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+                
+            } 
+            
+            
+            
         </div>
     </div>
 </section>
