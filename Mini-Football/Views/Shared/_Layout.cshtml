@@ -44,7 +44,7 @@
     <!--Navigation-->
     <nav class="navbar navbar-top-default navbar-expand-lg navbar-simple nav-line">
         <div class="container">
-            <a href="#home" title="Logo" class="logo scroll">
+            <a asp-controller="Home" asp-action="Index" title="Logo" class="logo scroll">
                 <!--Logo Default-->
                 <img src="~/football/img/logo-white.png" alt="logo" class="logo-white">
             </a>
@@ -52,7 +52,7 @@
             <!--Nav Links-->
             <div class="collapse navbar-collapse" id="megaone">
                 <div class="navbar-nav ml-auto">
-                    <a class="nav-link scroll" href="#rev-slider">Home</a>
+                    <a asp-controller="Home" asp-action="Index" class="nav-link scroll" >Home</a>
                     <a class="nav-link scroll" href="#about-us">About Team</a>
                     <a class="nav-link scroll" href="#leaderboard">Leaderboard</a>
                     <a class="nav-link scroll" href="#portfolio">Gallery</a>

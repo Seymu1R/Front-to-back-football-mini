@@ -3,14 +3,14 @@
     ViewData["Title"] = "Detail";
     
 }
-
+@model PlayerNews;
 <section class="page-title blog-page-title">
     <div class="bg-overlay bg-black opacity-6"></div>
     <div class="container">
-        <h2 class="hide-cursor">Blog Detail</h2>
+        <h2 class="hide-cursor">@Model.Player.FullName</h2>
         <ul class="page-breadcrumb link">
-            <li><a href="../index-corporate-finance.html"><span class="icon fas fa-home"></span>Home</a></li>
-            <li>Blog Detail</li>
+            <li><a asp-controller="Home" asp-action="Index" ><span class="icon fas fa-home"></span>Home</a></li>
+            <li>@Model.Player.FullName</li>
         </ul>
     </div>
 </section>
@@ -26,14 +26,14 @@
                     <!-- Blog List Inner -->
                     <div class="blog-listing-inner news_item">
                         <div class="news_desc">
-                            <h3 class="text-capitalize font-weight-500"><a href="blog-detail.html" class="color-black">How To Build A Virtual Reality Model With A Real-Time Cross-Device Preview.</a></h3>
+                            <h3 class="text-capitalize font-weight-500"><a href="blog-detail.html" class="color-black">@Model.News.Title</a></h3>
                             <ul class="meta-tags mt-20px mb-20px">
                                 <li><a href="javascript:void(0)"><i class="fa fa-calendar"></i>Feb 14</a></li>
                                 <li><a href="javascript:void(0)"> <i class="fa fa-user"></i> peter </a></li>
                                 <li><a href="javascript:void(0)"><i class="fa fa-comments"></i>5</a></li>
                                 <li><a href="javascript:void(0)"><i class="fa fa-tag"></i>work</a></li>
                             </ul>
-                            <p class="mb-3 text-grey alt-font">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when a printer took a galley.</p>
+                            <p class="mb-3 text-grey alt-font">@Model.News.Content</p>
                             <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis nec facilisis nullano volutpat justo. Nulla tempus ultricies feugiat. Duis magna risus, luctus id urna dapibus condimentum dui. Maecenas tempor non ex eu vehicula. Sed sit placerat velit.</p>
                             <blockquote class="mb-5 blockquote font-italic font-weight-light color-black"><i class="ti ti-quote-left font-30 pr-2"></i>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley</blockquote>
                             <ul class="rounded heading-space">
@@ -47,7 +47,7 @@
                             <!-- Comments -->
                             <div class="agency-author">
                                 <div class="author-avatar">
-                                    <img alt="image" src="../corporate-finance/images/post1.jpg" class="avatar"></div>
+                                    <img alt="image" src="@Model.Player.ImgUrl" class="avatar"></div>
                                 <div class="author-content">
                                     <span class="text-small">Written By</span>
                                     <h6><a href="javascript:void(0);">Steve Austin</a></h6>

@@ -476,7 +476,7 @@
             {
                 <div class="item">
                 <div class="team-item">
-                    <a href="#" ><img src="@item.ImgUrl" alt="team"></a>                    
+                    <a asp-controller="home" asp-action="Detail" asp-route-id="@item.Id" ><img src="@item.ImgUrl" alt="team"></a>                    
                     <div class="team-detail">
                         <h5 class="m-0">@item.FullName</h5>
                         <p class="mb-2">@item.Position</p>
