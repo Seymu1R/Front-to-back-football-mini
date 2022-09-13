@@ -1,4 +1,6 @@
-﻿using Mini_Football.Models;
+﻿
+
+using Mini_Football.Models;
 using System.Collections.Generic;
 
 namespace Mini_Football.ViewModels

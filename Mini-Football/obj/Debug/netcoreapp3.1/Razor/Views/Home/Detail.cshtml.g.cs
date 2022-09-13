@@ -27,7 +27,7 @@ using Mini_Football.ViewModels;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"6a7aa2d3d521547796da04a33d18a2f6bfc5f5dd", @"/Views/Home/Detail.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"7f2cab9ae42b8ab7e9b10fb84dde0477792efd78", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"3b7ca46080eeeb68fea390645a662fe95f3e0132", @"/Views/_ViewImports.cshtml")]
     #nullable restore
     public class Views_Home_Detail : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<PlayerNews>
     #nullable disable
